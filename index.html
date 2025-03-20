@@ -3,42 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrendingNow - Global Trends</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AI Bot Creator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 10px 20px;
+        }
+        .top-bar h2 {
+            color: white;
+            transition: color 0.3s;
+        }
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+        }
+        .toggle-switch span {
+            margin-right: 10px;
+        }
+        .toggle-switch input {
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .content {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            width: 300px;
+            background-color: #000;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+            text-align: center;
+            color: white;
+        }
+        .sidebar button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #0066ff, #0033cc);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .sidebar button:hover {
+            background: linear-gradient(to right, #0044cc, #0022aa);
+            transform: scale(1.05);
+        }
+        .main-content {
+            flex: 1;
+            background-color: #1a1a2e;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .chat-box {
+            flex: 1;
+            background-color: #0d0d1a;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-y: auto;
+            color: #ddd;
+            border: none;
+        }
+        .input-box {
+            display: flex;
+            gap: 5px;
+        }
+        .input-box input {
+            flex-grow: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .input-box button {
+            padding: 12px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .input-box button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .dark-mode {
+            background-color: #f0f0f0;
+            color: black;
+        }
+        .dark-mode .main-content {
+            background-color: #ffffff;
+        }
+        .dark-mode .chat-box {
+            background-color: #e0e0e0;
+            color: black;
+            border: none;
+        }
+        .dark-mode .top-bar h2 {
+            color: black;
+        }
+        .dark-mode .sidebar h2 {
+            color: black;
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <h1>🌍 TrendingNow - Global Trends</h1>
-        <button id="darkModeToggle">🌙 Dark Mode</button>
-    </header>
-
     <div class="container">
-        <h2>🌟 Trending News</h2>
-
-        <div class="filters">
-            <label for="category">Choose Category:</label>
-            <select id="category">
-                <option value="general">General</option>
-                <option value="business">Business</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="health">Health</option>
-                <option value="science">Science</option>
-                <option value="sports">Sports</option>
-                <option value="technology">Technology</option>
-            </select>
+        <div class="top-bar">
+            <h2>AI Bot Creator</h2>
+            <div class="toggle-switch">
+                <span>Dark Mode</span>
+                <input type="checkbox" id="darkModeToggle">
+            </div>
         </div>
-
-        <div id="trends"></div>
-
-        <div class="loader">
-            <div class="spinner"></div>
+        <div class="content">
+            <div class="sidebar">
+                <h2>SAYVA</h2>
+                <button onclick="startNewChat()">+ New Chat</button>
+                <button onclick="showTemplates()">Bot Templates</button>
+                <button onclick="showStats()">Stats</button>
+                <button onclick="showAbout()">About</button>
+            </div>
+            <div class="main-content">
+                <div class="chat-box" id="chatBox">
+                    <p>No session is active. Start a new chat.</p>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="userInput" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
         </div>
-
-        <button id="refreshData">🔄 Refresh Trends</button>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("darkModeToggle").addEventListener("change", function() {
+            document.body.classList.toggle("dark-mode", this.checked);
+        });
 
+        function startNewChat() {
+    
+          window.location.href ="chat-modal.html";
+        }
+        
+        function showTemplates() {
+            window.location.href = "bot-templates.html";  
+        }
+        
+        function showStats() {
+            window.location.href="stats.html";
+        }
+        
+        function showAbout() {
+            window.location.href="about.html";
+        }
+        
+        function sendMessage() {
+            let input = document.getElementById("userInput").value;
+            if (input.trim() !== "") {
+                let chatBox = document.getElementById("chatBox");
+                let message = document.createElement("p");
+                message.textContent = "You: " + input;
+                chatBox.appendChild(message);
+                
+                let botResponse = document.createElement("p");
+                botResponse.textContent = "Bot: I'm here to assist you!";
+                botResponse.style.color = "#00ff00";
+                chatBox.appendChild(botResponse);
+                
+                document.getElementById("userInput").value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
 </body>
 </html>

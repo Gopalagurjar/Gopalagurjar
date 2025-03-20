@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #161b22;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #58a6ff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        select, textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            background: #0d1117;
+            color: #ffffff;
+        }
+
+        .file-upload {
+            border: 2px dashed #30363d;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #c9d1d9;
+        }
+
+        .file-upload:hover {
+            background: #1a1f27;
+            cursor: pointer;
+        }
+
+        .file-upload input {
+            display: none;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-submit {
+            background: #d73a49;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background: #c9303e;
+            transform: scale(1.05);
+        }
+
+        .btn-cancel {
+            background: #30363d;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background: #444c56;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Report an Issue</h1>
+
+    <form action="submit_issue.php" method="POST" enctype="multipart/form-data">
+        <label for="issue-type">Issue Type</label>
+        <select id="issue-type" name="issue_type" required>
+            <option value="bug">Bug</option>
+            <option value="feature">Feature Request</option>
+            <option value="feedback">Feedback</option>
+        </select>
+
+        <label for="description">Describe the Issue</label>
+        <textarea id="description" name="description" rows="5" placeholder="Please provide details about the issue..." required></textarea>
+
+        <label>Screenshot (optional)</label>
+        <div class="file-upload">
+            <label for="file">📁 Drag and drop a screenshot or click to browse</label>
+            <input type="file" id="file" name="screenshot" accept="image/*">
+        </div>
+
+        <div class="btn-container">
+            <button type="submit" class="btn btn-submit">Submit Report</button>
+            <a href="about.html" class="btn btn-cancel">Cancel</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

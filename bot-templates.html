@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Templates</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: #161b22;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            padding: 30px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #58a6ff;
+        }
+        .header button {
+            background: #238636;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .header button:hover {
+            background: #2ea043;
+        }
+        .header .btn-back {
+            background: #30363d;
+        }
+        .header .btn-back:hover {
+            background: #484f58;
+        }
+        .bot-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .bot-card {
+            background: #21262d;
+            border-radius: 12px;
+            padding: 20px;
+            width: calc(33.333% - 20px);
+            transition: transform 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .bot-card:hover {
+            transform: translateY(-10px);
+        }
+        .bot-card h3 {
+            font-size: 20px;
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+        .bot-card p {
+            color: #c9d1d9;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .temperature {
+            font-size: 14px;
+            color: #8b949e;
+            margin-bottom: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background: #30363d;
+            color: #58a6ff;
+            padding: 5px 12px;
+            font-size: 12px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .btn {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+        .btn-primary {
+            background: #238636;
+        }
+        .btn-primary:hover {
+            background: #2ea043;
+        }
+        .btn-secondary {
+            background: #005cc5;
+        }
+        .btn-secondary:hover {
+            background: #0366d6;
+        }
+        @media (max-width: 992px) {
+            .bot-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 600px) {
+            .bot-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Bot Templates</h1>
+        <div>
+            <button class="btn-secondary" onclick="alert('Create New Template Coming Soon!')">+ Create New Template</button>
+            <button class="btn-back" onclick="window.location.href='index.html'">← Back to Chat</button>
+        </div>
+    </div>
+
+    <div class="bot-grid">
+       
+        <div class="bot-card">
+            <h3>CustomerCare</h3>
+            <p>Professional customer service assistant</p>
+            <p class="temperature">Temperature: 0.7</p>
+            <span class="tag">System Template</span>
+            <div class="btn-group">
+                <a href="#" class="btn btn-secondary">Use This Template</a>
+                <a href="#" class="btn btn-primary">Embed</a>
+            </div>
+        </div>
+
+       
+        <div class="bot-card">
+            <h3>SalesBot</h3>
+            <p>Knowledgeable sales and product specialist</p>
+            <p class="temperature">Temperature: 0.8</p>
+            <span class="tag">System Template</span>
+            <div class="btn-group">
+                <a href="#" class="btn btn-secondary">Use This Template</a>
+                <a href="#" class="btn btn-primary">Embed</a>
+            </div>
+        </div>
+
+       
+        <div class="bot-card">
+            <h3>TechSupport</h3>
+            <p>Technical problem-solving specialist</p>
+            <p class="temperature">Temperature: 0.3</p>
+            <span class="tag">System Template</span>
+            <div class="btn-group">
+                <a href="#" class="btn btn-secondary">Use This Template</a>
+                <a href="#" class="btn btn-primary">Embed</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

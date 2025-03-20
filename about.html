@@ -1,0 +1,487 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sayva Bot Creator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 40px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #161b22;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            position: relative;
+        }
+
+        /* Close Button */
+        .btn-close {
+            position: absolute;
+            top: 20px;
+            right: 130px;
+            background: transparent;
+            color: #ffffff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-close:hover {
+            color: #58a6ff;
+        }
+
+        /* Report Issue Button (Clickable) */
+        .btn-report {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: #d73a49;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .btn-report:hover {
+            background: #c9303e;
+        }
+
+        h1, h2 {
+            color: #58a6ff;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 16px;
+            color: #c9d1d9;
+            margin-bottom: 15px;
+        }
+        .features {
+            list-style: none;
+        }
+        .features li {
+            font-size: 16px;
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+        .features li span {
+            color: #c9d1d9;
+        }
+        .grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .grid-item {
+            flex: 1;
+            min-width: 280px;
+        }
+        .highlight {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+        .contact, .company, .follow {
+            margin-top: 40px;
+        }
+        .contact p, .company p, .follow a {
+            color: #c9d1d9;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .contact a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            color: #2ea043;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+        }
+        .footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .footer a:hover {
+            color: #2ea043;
+        }
+        .social-links a {
+            color: #c9d1d9;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .social-links a:hover {
+            color: #58a6ff;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                flex-direction: column;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .btn-close {
+                right: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+
+    <button class="btn-close" onclick="goBack()">✖</button>
+    <button onclick="btnreport()">🚩 Report Issue</button>
+
+    <div class="section">
+        <h1>About Sayva Bot Creator</h1>
+        <p>
+            <span class="highlight">sayva</span> Bot Creator is a powerful AI platform created by Navaura 
+            that allows you to create, customize, and deploy AI chatbots instantly with <strong>ZERO coding</strong>. 
+            Whether you need a customer service bot, a learning assistant, or a creative writing partner, 
+            <span class="highlight">sayva</span> makes it effortless to bring your ideas to life ASAP.
+        </p>
+
+        <ul class="features">
+            <li>✅ <span>Create custom AI bot templates instantly</span></li>
+            <li>✅ <span>Manage multiple chat sessions</span></li>
+            <li>✅ <span>Embed bots on any website</span></li>
+        </ul>
+    </div>
+
+    <div class="grid">
+        <div class="grid-item section">
+            <h2>Why Choose Sayva?</h2>
+            <ul class="features">
+                <li>⚡ <span>NO CODE NEEDED - absolutely zero technical skills required</span></li>
+                <li>💲 <span>NO EXTRA EXPENSE - affordable for businesses of all sizes</span></li>
+                <li>👥 <span>NO NEED TO HIRE DEVELOPERS - save thousands on technical talent</span></li>
+                <li>⏱️ <span>NO TIME WASTE - get your custom bot running ASAP</span></li>
+                <li>⚙️ <span>FULLY CUSTOMIZABLE - without complex node systems or coding</span></li>
+            </ul>
+        </div>
+
+        <div class="grid-item section">
+            <h2>Getting Started</h2>
+            <p><strong>1. Create a Template</strong></p>
+            <p>Design your bot's personality and behavior using our simple template system - no coding or node editing required.</p>
+
+            <p><strong>2. Start a Chat</strong></p>
+            <p>Test your bot in real-time with our interactive chat interface.</p>
+
+            <p><strong>3. Share Your Bot</strong></p>
+            <p>Generate an embed code to add your bot to any website - all within minutes, not days or weeks.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>📧 <a href="mailto:namaskar@navaura.in">namaskar@navaura.in</a></p>
+            <p>📞 +91 9073888611</p>
+        </div>
+
+        <div class="company">
+            <h2>About the Company</h2>
+            <p>🏢 <span class="highlight">sayva</span> is created by Navaura</p>
+            <p>📍 Headquartered in Kolkata</p>
+        </div>
+
+        <div class="follow">
+            <h2>Follow Us</h2>
+            <div class="social-links">
+                <a href="#">🐦 Twitter</a>
+                <a href="#">🔗 LinkedIn</a>
+                <a href="#">📷 Instagram</a>
+                <a href="#">📘 Facebook</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+    function btnreport() {
+            window.location.href = "report.html";  // Redirect to templates page
+        }
+</script>
+
+</body>  
+</html-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sayva Bot Creator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 40px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #161b22;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            position: relative;
+        }
+
+        /* Buttons Styling */
+        .btn-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-close {
+            background: transparent;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        .btn-close:hover {
+            color: #58a6ff;
+        }
+
+        .btn-report {
+            background: #d73a49;
+            color: white;
+        }
+        .btn-report:hover {
+            background: #c9303e;
+            transform: scale(1.05);
+        }
+
+        /* Headings and Sections */
+        h1, h2 {
+            color: #58a6ff;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 16px;
+            color: #c9d1d9;
+            margin-bottom: 15px;
+        }
+        .features {
+            list-style: none;
+        }
+        .features li {
+            font-size: 16px;
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+        .features li span {
+            color: #c9d1d9;
+        }
+
+        /* Grid Styling */
+        .grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .grid-item {
+            flex: 1;
+            min-width: 280px;
+        }
+        .highlight {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+
+        /* Footer Styling */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+        }
+        .footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .footer a:hover {
+            color: #2ea043;
+        }
+
+        .social-links a {
+            color: #c9d1d9;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .social-links a:hover {
+            color: #58a6ff;
+        }
+
+      
+        @media (max-width: 768px) {
+            .grid {
+                flex-direction: column;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .btn-container {
+                top: 15px;
+                right: 15px;
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    
+    <div class="btn-container">
+        <button class="btn btn-close" onclick="goBack()">✖</button>
+        <a href="report.html" class="btn btn-report">🚩 Report Issue</a>
+    </div>
+
+    <div class="section">
+        <h1>About Sayva Bot Creator</h1>
+        <p>
+            <span class="highlight">Sayva</span> Bot Creator is a powerful AI platform created by Navaura 
+            that allows you to create, customize, and deploy AI chatbots instantly with <strong>ZERO coding</strong>. 
+            Whether you need a customer service bot, a learning assistant, or a creative writing partner, 
+            <span class="highlight">Sayva</span> makes it effortless to bring your ideas to life ASAP.
+        </p>
+
+        <ul class="features">
+            <li>✅ <span>Create custom AI bot templates instantly</span></li>
+            <li>✅ <span>Manage multiple chat sessions</span></li>
+            <li>✅ <span>Embed bots on any website</span></li>
+        </ul>
+    </div>
+
+    <div class="grid">
+        <div class="grid-item section">
+            <h2>Why Choose Sayva?</h2>
+            <ul class="features">
+                <li>⚡ <span>NO CODE NEEDED - absolutely zero technical skills required</span></li>
+                <li>💲 <span>NO EXTRA EXPENSE - affordable for businesses of all sizes</span></li>
+                <li>👥 <span>NO NEED TO HIRE DEVELOPERS - save thousands on technical talent</span></li>
+                <li>⏱️ <span>NO TIME WASTE - get your custom bot running ASAP</span></li>
+                <li>⚙️ <span>FULLY CUSTOMIZABLE - without complex node systems or coding</span></li>
+            </ul>
+        </div>
+
+        <div class="grid-item section">
+            <h2>Getting Started</h2>
+            <p><strong>1. Create a Template</strong></p>
+            <p>Design your bot's personality and behavior using our simple template system - no coding required.</p>
+
+            <p><strong>2. Start a Chat</strong></p>
+            <p>Test your bot in real-time with our interactive chat interface.</p>
+
+            <p><strong>3. Share Your Bot</strong></p>
+            <p>Generate an embed code to add your bot to any website - all within minutes.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>📧 <a href="mailto:namaskar@navaura.in">namaskar@navaura.in</a></p>
+            <p>📞 +91 9073888611</p>
+        </div>
+
+        <div class="company">
+            <h2>About the Company</h2>
+            <p>🏢 <span class="highlight">Sayva</span> is created by Navaura</p>
+            <p>📍 Headquartered in Kolkata</p>
+        </div>
+
+        <div class="follow">
+            <h2>Follow Us</h2>
+            <div class="social-links">
+                <a href="#">🐦 Twitter</a>
+                <a href="#">🔗 LinkedIn</a>
+                <a href="#">📷 Instagram</a>
+                <a href="#">📘 Facebook</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>  
+</html>

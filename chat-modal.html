@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Modal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e2e;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            width: 450px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .modal h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .bot-template {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s, background 0.3s;
+            cursor: pointer;
+        }
+        .bot-template:hover {
+            background: #007bff;
+            transform: scale(1.05);
+        }
+        .bot-template h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .bot-template p {
+            font-size: 14px;
+            color: #ccc;
+        }
+        .bot-template .tag {
+            display: inline-block;
+            background: #666;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="modal">
+    <h2>Select a Bot Template</h2>
+
+    <div class="bot-template" onclick="alert('CustomerCare selected!')">
+        <h3>CustomerCare</h3>
+        <p>Professional customer service assistant</p>
+        <span class="tag">System</span>
+    </div>
+
+    <div class="bot-template" onclick="alert('SalesBot selected!')">
+        <h3>SalesBot</h3>
+        <p>Knowledgeable sales and product specialist</p>
+        <span class="tag">System</span>
+    </div>
+
+    <div class="bot-template" onclick="alert('TechSupport selected!')">
+        <h3>TechSupport</h3>
+        <p>Technical problem-solving specialist</p>
+        <span class="tag">System</span>
+    </div>
+
+    <button onclick="window.location.href='index.html'">Back</button>
+</div>
+
+</body>
+</html>
